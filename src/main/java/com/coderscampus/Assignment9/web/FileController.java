@@ -56,10 +56,7 @@ public class FileController {
     @GetMapping("/all-recipes")
 
     public List<Recipe> displayAllRecipes() {
-        return fileService.getRecipes().stream()
-                .filter(Recipe::getGlutenFree)
-                .collect(Collectors.toList());
-
+        return fileService.getRecipes();
     }
 
 }
